@@ -12,11 +12,11 @@ function simulate() {
     bar.style.width = crowd + "%";
 
     if (crowd > 75) {
-        bar.style.background = "red";
+        bar.style.background = "#ff3b3b";
         document.getElementById("suggestion").innerText =
             "🚨 High congestion! Avoid " + zone;
     } else if (crowd > 40) {
-        bar.style.background = "orange";
+        bar.style.background = "#ffb347";
         document.getElementById("suggestion").innerText =
             "⚠️ Moderate crowd. Plan accordingly.";
     } else {
@@ -62,7 +62,17 @@ function send() {
         response += "Avoid crowded zones and follow suggestions";
 
     chat.innerHTML += "<p>🧑 " + input + "</p>";
-    chat.innerHTML += "<p>" + response + "</p>";
+    setTimeout(() => {
+        chat.innerHTML += "<p>" + response + "</p>";
+    }, 500);
 
     document.getElementById("input").value = "";
 }
+
+setInterval(() => {
+    updateHeatmap();
+}, 3000);
+
+setInterval(() => {
+    simulate();
+}, 5000);

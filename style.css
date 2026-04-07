@@ -6,8 +6,13 @@ body {
 }
 
 .container {
-    text-align: center;
-    padding: 20px;
+    display: grid;
+    grid-template-columns: 280px 1fr 320px;
+    gap: 30px;
+    padding: 40px;
+    max-width: 1400px;
+    margin: auto;
+    align-items: start;
 }
 
 h1 {
@@ -26,6 +31,32 @@ h1 {
     gap: 15px;
     justify-content: center;
     margin-bottom: 30px;
+}
+
+.center-panel {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.right-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.chatbox {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .cell {
@@ -60,21 +91,24 @@ h1 {
 
 /* DASHBOARD */
 .dashboard {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 250px);
     gap: 20px;
-    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .card {
-    background: rgba(255, 255, 255, 0.08);
-    padding: 20px;
-    width: 250px;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(15px);
     border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
 }
 
 .highlight {
-    border: 2px solid #00ffcc;
+    grid-column: span 2;
 }
 
 .progress {
@@ -94,22 +128,30 @@ h1 {
 /* BUTTON */
 button {
     margin-top: 20px;
-    padding: 12px 25px;
+    padding: 14px 28px;
     border: none;
-    background: #00ffcc;
+    background: linear-gradient(45deg, #00ffcc, #00ccaa);
     color: black;
     font-weight: bold;
-    border-radius: 10px;
+    border-radius: 12px;
     cursor: pointer;
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.4);
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 255, 204, 0.7);
 }
 
 /* CHAT */
-.chatbox {
-    width: 300px;
-    margin: 20px auto;
+
+
+#chat p {
     background: rgba(255, 255, 255, 0.1);
-    padding: 15px;
+    padding: 8px 12px;
     border-radius: 10px;
+    margin: 6px 0;
 }
 
 #chat {
@@ -117,4 +159,57 @@ button {
     overflow-y: auto;
     margin-bottom: 10px;
     text-align: left;
+}
+
+.card,
+.chatbox,
+.zone,
+.cell {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card:hover,
+.zone:hover,
+.cell:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+#chat p {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px;
+    border-radius: 8px;
+    margin: 5px 0;
+}
+
+.status {
+    color: #00ffcc;
+    font-size: 14px;
+}
+
+#bar {
+    height: 10px;
+    border-radius: 10px;
+    transition: width 0.6s ease-in-out;
+}
+
+.chatbox input {
+    flex: 1;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+}
+
+.chatbox button {
+    margin-left: 10px;
+}
+
+h1 {
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    margin-bottom: 20px;
 }
