@@ -183,3 +183,61 @@ button {
         width: 100%;
     }
 }
+
+/* 🔥 MOBILE LAYOUT FIX */
+@media (max-width: 768px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding: 20px;
+    }
+
+    /* ORDER FIX */
+    .center-panel {
+        order: 1;
+    }
+
+    .left-panel {
+        order: 2;
+    }
+
+    .right-panel {
+        order: 3;
+    }
+
+    /* FULL WIDTH */
+    .dashboard {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    /* HEATMAP FIX */
+    .heatmap {
+        grid-template-columns: 1fr;
+    }
+
+    /* MAP FIX */
+    .map {
+        grid-template-columns: 1fr;
+    }
+
+    /* BUTTON FULL WIDTH */
+    button {
+        width: 100%;
+    }
+
+    /* CHAT FIX */
+    .chatbox {
+        height: auto;
+    }
+
+    #chat {
+        height: 150px;
+    }
+}
