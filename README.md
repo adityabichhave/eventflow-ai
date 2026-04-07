@@ -1,29 +1,42 @@
-# Smart EventFlow AI
+# 🚀 Smart EventFlow AI
 
-## 🚀 Overview
-Smart EventFlow AI improves physical event experience in stadiums by optimizing crowd movement and reducing waiting time.
+## 📌 Vertical
+Physical Event Experience (Stadium Optimization)
 
-## 💡 Features
-- Live Crowd Heatmap
-- AI Chat Assistant
-- Stadium Navigation UI
-- Real-time Simulation
-- Smart Suggestions
+## 💡 Problem
+Large-scale events face crowd congestion, long waiting times, and poor navigation.
+
+## 🚀 Solution
+Smart EventFlow AI is a real-time assistant that:
+- Monitors crowd density
+- Suggests optimal routes
+- Improves user experience using AI logic
+
+## 🧠 Features
+- 🔥 Live Crowd Heatmap
+- 📍 Stadium Navigation UI
+- 🤖 AI Chat Assistant
+- ⚡ Real-time Simulation
+- ☁️ Firebase Integration
 
 ## ⚙️ How It Works
-- Simulates crowd density
-- Displays heatmap and dashboard
-- Suggests optimal routes
-- Provides chatbot-based help
+- Simulates crowd data
+- Stores data in Firebase Realtime Database
+- Updates UI dynamically
+- Provides AI-based suggestions
 
-## ☁️ Google Services (Conceptual)
-- Firebase for real-time updates
-- Google Maps for navigation
-- Gemini API for AI assistant
+## ☁️ Google Services Used
+- Firebase Realtime Database (real-time data sync)
+- Firebase Hosting (deployment)
 
 ## 📌 Assumptions
 - Crowd data is simulated
-- Web-based interface
+- Users access via web interface
 
-## 🎯 Use Case
-Helps users avoid congestion, find facilities, and navigate efficiently inside large stadiums.
+## 🌍 Real-World Use
+- Stadium crowd control
+- Emergency evacuation support
+- Smart navigation inside venues
+
+## 🔐 Security Note
+Firebase is in test mode for demo purposes. Production systems would include authentication and secure rules.

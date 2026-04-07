@@ -213,3 +213,102 @@ h1 {
 .subtitle {
     margin-bottom: 20px;
 }
+
+
+/* MAIN GRID */
+.container {
+    display: grid;
+    grid-template-columns: 280px 1fr 320px;
+    gap: 30px;
+    padding: 40px;
+    max-width: 1400px;
+    margin: auto;
+    align-items: start;
+}
+
+/* PANELS */
+.left-panel,
+.center-panel,
+.right-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* CENTER ALIGNMENT */
+.center-panel {
+    align-items: center;
+    text-align: center;
+}
+
+/* DASHBOARD GRID */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(2, 260px);
+    gap: 20px;
+    justify-content: center;
+}
+
+/* FULL WIDTH CARD */
+.highlight {
+    grid-column: span 2;
+}
+
+/* CARDS */
+.card {
+    width: 100%;
+    min-height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* HEATMAP + MAP FIX */
+.heatmap,
+.map {
+    justify-content: start;
+}
+
+/* CHATBOX PERFECT ALIGN */
+.chatbox {
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#chat {
+    flex: 1;
+    overflow-y: auto;
+}
+
+/* INPUT ROW */
+.input-row {
+    display: flex;
+    gap: 10px;
+}
+
+.input-row input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+}
+
+.input-row button {
+    padding: 10px 16px;
+}
+
+/* BUTTON CENTER */
+button {
+    align-self: center;
+}
+
+/* TYPOGRAPHY BALANCE */
+h1 {
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    margin-bottom: 10px;
+}
