@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <title>Smart EventFlow AI</title>
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -72,19 +74,24 @@
       <h2>🤖 AI Assistant</h2>
       <div class="chatbox">
         <div id="chat"></div>
-        <div style="display:flex;">
+
+        <div class="input-row">
           <input type="text" id="input" placeholder="Ask something...">
           <button onclick="send()">Send</button>
         </div>
+
       </div>
 
     </div>
 
   </div>
 
+  <!-- Firebase -->
   <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
+
   <script src="app.js"></script>
+
 </body>
 
 </html>
