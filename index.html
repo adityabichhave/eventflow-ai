@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Smart EventFlow AI</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🚀 Smart EventFlow AI</h1>
+        <p class="subtitle">AI-Powered Stadium Experience System</p>
+
+        <!-- HEATMAP -->
+        <h2>🔥 Crowd Heatmap</h2>
+        <div class="heatmap">
+            <div class="cell" id="c1">Gate A</div>
+            <div class="cell" id="c2">Gate B</div>
+            <div class="cell" id="c3">Food</div>
+            <div class="cell" id="c4">Washroom</div>
+        </div>
+
+        <!-- MAP -->
+        <h2>📍 Stadium Map</h2>
+        <div class="map">
+            <div class="zone">Gate A</div>
+            <div class="zone">Gate B</div>
+            <div class="zone">Food</div>
+            <div class="zone">Seats</div>
+        </div>
+
+        <!-- DASHBOARD -->
+        <div class="dashboard">
+
+            <div class="card">
+                <h3>📍 Active Zone</h3>
+                <p id="zone">--</p>
+            </div>
+
+            <div class="card">
+                <h3>👥 Crowd Level</h3>
+                <p id="crowd">--</p>
+                <div class="progress">
+                    <div id="bar"></div>
+                </div>
+            </div>
+
+            <div class="card highlight">
+                <h3>🧠 AI Suggestion</h3>
+                <p id="suggestion">Click simulate</p>
+            </div>
+
+        </div>
+
+        <button onclick="simulate()">⚡ Simulate Live Data</button>
+
+        <!-- CHATBOT -->
+        <h2>🤖 AI Assistant</h2>
+        <div class="chatbox">
+            <div id="chat"></div>
+            <input type="text" id="input" placeholder="Ask something...">
+            <button onclick="send()">Send</button>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.subtitle {
+    opacity: 0.7;
+    margin-bottom: 20px;
+}
+
+/* HEATMAP */
+.heatmap {
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.cell {
+    padding: 20px;
+    border-radius: 10px;
+    background: green;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+/* MAP */
+.map {
+    display: grid;
+    grid-template-columns: repeat(2, 120px);
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.zone {
+    padding: 20px;
+    background: #222;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.zone:hover {
+    background: #00ffcc;
+    color: black;
+}
+
+/* DASHBOARD */
+.dashboard {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 20px;
+    width: 250px;
+    border-radius: 15px;
+}
+
+.highlight {
+    border: 2px solid #00ffcc;
+}
+
+.progress {
+    background: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+#bar {
+    height: 10px;
+    width: 0%;
+    background: #00ffcc;
+    transition: 0.5s;
+}
+
+/* BUTTON */
+button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    background: #00ffcc;
+    color: black;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* CHAT */
+.chatbox {
+    width: 300px;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#chat {
+    height: 150px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    text-align: left;
+}
