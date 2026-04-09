@@ -40,6 +40,15 @@ Future Scope:
 - Google Maps API for navigation
 - Gemini AI for advanced assistant
 
+## 🔗 Real-Time Architecture
+
+- Firebase Realtime Database ensures live synchronization
+- Event-driven updates via listeners
+- Scalable cloud backend using Google Firebase
+
+Data Flow:
+User → Simulation → Firebase → Real-time UI update
+
 ---
 
 ## 🧠 How It Works

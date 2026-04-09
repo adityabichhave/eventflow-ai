@@ -57,7 +57,11 @@ function updateUI(zone, crowd) {
     document.getElementById("suggestion").innerText += 
     " | " + predictTrend(crowd);
     document.getElementById("loading").style.display = "none";
+    let best = getBestZone();
 
+document.getElementById("suggestion").innerText += 
+    " | 👉 Try: " + best;
+    
     let bar = document.getElementById("bar");
     bar.style.width = crowd + "%";
 
@@ -123,6 +127,11 @@ function send() {
     document.getElementById("input").value = "";
 }
 
+// Route recommendation logic
+function getBestZone() {
+    let safeZones = zones.filter(z => z !== window.lastZone);
+    return safeZones[Math.floor(Math.random() * safeZones.length)];
+}
 // Predict next crowd trend (AI-like logic)
 function predictTrend(crowd) {
     if (crowd > 70) return "📈 Crowd likely to increase";

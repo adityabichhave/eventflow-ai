@@ -4,10 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <title>Smart EventFlow AI</title>
-  
+
+  <!-- Responsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- SEO / Accessibility Boost -->
+  <meta name="description" content="AI-powered stadium crowd management system using Firebase real-time data">
+
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -40,9 +47,14 @@
     <div class="center-panel">
 
       <h1>🚀 Smart EventFlow AI</h1>
-      <p class="subtitle">  AI-Powered Stadium Experience System</p>
+      <p class="subtitle">AI-Powered Stadium Experience System</p>
+
+      <!-- Loading Indicator -->
       <p id="loading">⏳ Loading real-time data...</p>
-      
+
+      <!-- Error Display -->
+      <p id="error" style="color:#ff6b6b;"></p>
+
       <div class="dashboard">
 
         <div class="card">
@@ -65,19 +77,33 @@
 
       </div>
 
-      <button onclick="simulate()">⚡ Simulate Live Data</button>
+      <!-- Accessible Button -->
+      <button onclick="simulate()" aria-label="Simulate crowd data">
+        ⚡ Simulate Live Data
+      </button>
+
     </div>
 
     <!-- RIGHT PANEL -->
     <div class="right-panel">
 
       <h2>🤖 AI Assistant</h2>
+
       <div class="chatbox">
+
         <div id="chat"></div>
 
         <div class="input-row">
-          <input type="text" id="input" placeholder="Ask something...">
-          <button onclick="send()">Send</button>
+          <input 
+            type="text" 
+            id="input" 
+            placeholder="Ask something..." 
+            aria-label="AI chat input"
+          >
+
+          <button onclick="send()" aria-label="Send message">
+            Send
+          </button>
         </div>
 
       </div>
@@ -86,12 +112,14 @@
 
   </div>
 
-  <!-- Firebase -->
+  <!-- ================= FIREBASE ================= -->
   <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
 
+  <!-- ================= MAIN APP ================= -->
   <script src="app.js"></script>
 
+  <!-- ================= TESTING ================= -->
   <script src="test.js"></script>
 
 </body>
